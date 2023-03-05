@@ -1,11 +1,11 @@
 <template>
-  <div class="page">
+  <div class="page-wrapper">
     <slot />
   </div>
 </template>
 
 <style scoped>
-.page {
+.page-wrapper {
  @apply w-full h-full;
  /* @apply min-w-xs max-w-160; */
  @apply flex flex-col mx-auto;

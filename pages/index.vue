@@ -3,7 +3,7 @@ const online = useOnline()
 </script>
 
 <template>
-  <div class="overflow-y-scroll">
+  <div class="overflow-y-scroll w-full">
     <Suspense>
       <ClientOnly>
         <div v-if="!online" text-gray:80>
