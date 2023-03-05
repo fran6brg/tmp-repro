@@ -3,12 +3,10 @@ const online = useOnline()
 </script>
 
 <template>
-  <div>
-    <Logos mb-6 />
+  <div class="overflow-y-scroll">
     <Suspense>
       <ClientOnly>
-        <PageView v-if="online" />
-        <div v-else text-gray:80>
+        <div v-if="!online" text-gray:80>
           You're offline
         </div>
       </ClientOnly>
@@ -18,6 +16,8 @@ const online = useOnline()
         </div>
       </template>
     </Suspense>
-    <InputEntry />
+    <div v-for="i in 10" :key="i" class="h-25 bg-white dark:bg-black">
+      scroll mf
+    </div>
   </div>
 </template>

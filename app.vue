@@ -24,4 +24,9 @@ html.dark {
   background: #222;
   color: white;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
 </style>

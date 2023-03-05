@@ -1,13 +1,11 @@
+<script setup lang="ts">
+import { appDebug } from '../constants/index'
+</script>
+
 <template>
-  <div
-    text="xl gray4"
-    m-5
-    flex
-    justify-center
-    gap-3
-  >
-    <NuxtLink i-carbon-campsite to="/" />
-    <a i-carbon-logo-github href="https://github.com/antfu/vitesse-nuxt3" target="_blank" />
-    <DarkToggle />
+  <div class="w-full p-3 flex justify-end gap-3 backdrop-filter backdrop-blur" :class="{ 'bg-gray-100 dark:bg-gray-900': appDebug }">
+    <NuxtLink i-carbon-campsite to="https://fran6.eth.limo" target="_blank" rel="noopener">
+      IPFS hosted
+    </NuxtLink>
   </div>
 </template>

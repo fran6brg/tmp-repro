@@ -1,9 +1,16 @@
+<script setup lang="ts">
+import { appDebug } from '../constants/index'
+</script>
+
 <template>
-  <main class="py-20 px-10 text-center">
-    <slot />
-    <Footer />
-    <div class="mt-5 mx-auto text-center opacity-25 text-sm">
-      [Default Layout]
-    </div>
+  <main class="w-screen h-screen flex flex-col p-0 text-center relative" :class="{ 'bg-gray-100 dark:bg-gray-900': appDebug }">
+    <Banner class="fixed top-0 h-8" />
+    <Header class="fixed top-8 h-14" />
+    <PageWrapper class="fixed mt-22">
+      <div class="h-full w-full overflow-auto gap-4">
+        <slot />
+      </div>
+    </PageWrapper>
+    <Footer class="fixed bottom-0" />
   </main>
 </template>
