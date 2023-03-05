@@ -17,7 +17,7 @@ const online = useOnline()
       </template>
     </Suspense>
     <div v-for="i in 10" :key="i" class="w-full h-25 bg-white dark:bg-black">
-      scroll mf
+      {{ i }} scroll mf
     </div>
   </div>
 </template>
